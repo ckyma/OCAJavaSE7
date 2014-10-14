@@ -3,7 +3,7 @@ package edu.cy.chapter4.string;
 /**
  * Created by yuchen on 12/10/14.
  */
-public class Test {
+public class TestString {
     public static void main(String[] args) {
         String str1 = new String("Harry");
         String str2 = new String("Harry");
