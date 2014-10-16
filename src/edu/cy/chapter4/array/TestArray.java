@@ -18,6 +18,8 @@ public class TestArray {
         int[][] multiArray1;
         int multiArray2[][];
 
+        int[] intArray2 = {1, 2};
+
         // System.out.println(intArray);    // Error: array has not been initialized
 
         Object[] objArray = new Object[]{
