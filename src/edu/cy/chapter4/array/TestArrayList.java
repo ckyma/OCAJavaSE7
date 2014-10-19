@@ -32,6 +32,23 @@ public class TestArrayList {
         ArrayList<String> myArrayList1 = new ArrayList<String>();
         ArrayList<String> myArrayList2 = new ArrayList<>();
 
+        // ArrayList<int> myArrayList3 = new ArrayList<>();    // Error, type cannot be primitives
+        ArrayList<Integer> myArrayList3 = new ArrayList<>();
+        Integer intVal = new Integer(1);
+        myArrayList3.add(intVal);
+        myArrayList3.add(2);
+        myArrayList3.add(new Integer('a'));
+        Integer[] intArray = {1, 2};
+        // myArrayList3.addAll(intArray);  // Error, cannot be primitive array [], must be Collection<>
+        myArrayList3.addAll(myArrayList3);
+        System.out.println(myArrayList3);   // [1, 2, 97, 1, 2, 97]
+
+        // ArrayList<char> myArrayList4 = new ArrayList<>();   // Error, type cannot be primitives
+        ArrayList<Character> myArrayList4 = new ArrayList<>();
+        myArrayList4.add('a');
+        // myArrayList4.add("b");  // Error
+        System.out.println(myArrayList4);   // [a]
+
         MyPerson p1 = new MyPerson("Tom");
         MyPerson p2 = new MyPerson("Jerry");
         MyPerson p3 = new MyPerson("Paul");
@@ -131,6 +148,17 @@ public class TestArrayList {
         // get(1) Still the same object
         myArrayList.get(1).append("+1");
         System.out.println(clonedArrayList.get(1)); // SB2+1
-        
+
+        // clear()
+        System.out.println(myArrayList1);   // []
+        System.out.println(clonedArrayList);    // [SB1, SB2+1, SB2+1]
+        // System.out.println(clonedArrayList.clear()); // Error, cannot println a method returning "void"
+        clonedArrayList.clear();
+        System.out.println(clonedArrayList);    // []
+
+        // Assign null to element
+        myArrayList.set(1, null);
+        System.out.println(myArrayList.size()); // 3
+        System.out.println(myArrayList);    // [SB0, null, SB2+1]
     }
 }
