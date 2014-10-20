@@ -21,3 +21,15 @@ class Book1{
         System.out.println("Book1");
     }
 }
+
+// public class Book2     // Error
+// private class Book2     // Error: private is not allowed here
+// protected class Book2     // Error: protected is not allowed here
+// static class Book2          // Error: static is not allowed here
+// final class Book2      // Ok
+abstract class Book2      // Ok
+{
+    public static void main(String[] args) {
+        System.out.println("Book2");
+    }
+}

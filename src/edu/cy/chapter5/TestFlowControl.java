@@ -31,22 +31,40 @@ public class TestFlowControl {
         /*
          * switch
           */
+        // int score1 = 1.2;    // Error, Java is more strict for implicit type-casting, only promotion is allowed
+        double score1 = 1;      // OK
+        System.out.println(score1);         // 1.0
         switch (score){
             case 1:
                 System.out.println(1);
                 break;
+            // case 1.2:   // Error: incompatible types double vs. int
+            // case 10/6:  // Error: duplicate 1
+            case 13/6:  // Ok, 2. Caution: int/int = int
+                System.out.println(2);
+            case 'a':
+                System.out.println('a');
             default:
                 System.out.println(score);
         }
 
         // switch uses equals() for String
-        String day = "SUN";
+//        String day = "SUN";   // Sunday Tuesday
+        String day = "WED";     // NA Sunday Tuesday
+        Switch: // Label
         switch (day){
             case "MON":
-                System.out.println(day);
+                System.out.println("Monday");
                 break;
             default:
-                System.out.println(day);
+                System.out.println("NA");
+                // break;
+            case "SUN":
+                System.out.println("Sunday");
+                break Switch;
+            case "Tue":
+                System.out.println("Tuesday");
+                // continue Switch;             // ONLY loop label is allowed for continue
         }
 
         /*
@@ -92,6 +110,14 @@ public class TestFlowControl {
         }
         for(StringBuilder element : examsSB){
             System.out.println(element);
+        }
+
+        // Nested enhanced for loop
+        for(StringBuilder element : examsSB){
+            System.out.println(element);
+            for(StringBuilder element1 : examsSB){
+                System.out.println(element1);
+            }
         }
     }
 
