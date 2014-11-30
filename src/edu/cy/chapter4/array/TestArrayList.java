@@ -32,7 +32,7 @@ public class TestArrayList {
         ArrayList<String> myArrayList1 = new ArrayList<String>();
         ArrayList<String> myArrayList2 = new ArrayList<>();
 
-        // ArrayList<int> myArrayList3 = new ArrayList<>();    // Error, type cannot be primitives
+        // ArrayList<int> myArrayList3 = new ArrayList<>();    // Error, type can NOT be primitives
         ArrayList<Integer> myArrayList3 = new ArrayList<>();
         Integer intVal = new Integer(1);
         myArrayList3.add(intVal);
@@ -62,9 +62,15 @@ public class TestArrayList {
 
         for(MyPerson person : myPersonArrayList){
             System.out.println(person.name);
+            // myPersonArrayList.remove(0);    // Runtime exception: java.lang.IndexOutOfBoundsException: Index: 3, Size: 2
+            // myPersonArrayList.remove(person);
         }
-
+        System.out.println(myPersonArrayList);
+        
         myPersonArrayList.add(1, p2);
+        // myPersonArrayList.add(10, p3);  // Runtime exception: java.lang.IndexOutOfBoundsException: Index: 10, Size: 3
+        myPersonArrayList.add(3, p3);   // index can = size()
+        System.out.println(myPersonArrayList);
 
         /*
         * Iterator
@@ -103,7 +109,9 @@ public class TestArrayList {
         myPersonArrayList.get(0).name = "Tommy";
         for(int i = 0; i < myPersonArrayList.size(); i++){
             System.out.println(myPersonArrayList.get(i).name);
+            myPersonArrayList.remove(i);
         }
+        System.out.println(myPersonArrayList);
         System.out.println(p1.name);
 
         /*
@@ -130,7 +138,9 @@ public class TestArrayList {
         System.out.println(myPersonArrayList.indexOf(p3));                      // 1
         System.out.println(myPersonArrayList.indexOf(new MyPerson("Paul")));    // 1
 
-        // clone()
+        /*
+        * clone()
+         */
         ArrayList<StringBuilder> assignedArrayList = myArrayList;
         // ArrayList<StringBuilder> clonedArrayList = myArrayList.clone(); // Incompatible types: clone() returns Object
                                                                             // public Object clone() {}
@@ -149,7 +159,9 @@ public class TestArrayList {
         myArrayList.get(1).append("+1");
         System.out.println(clonedArrayList.get(1)); // SB2+1
 
-        // clear()
+        /*
+         * clear()
+          */
         System.out.println(myArrayList1);   // []
         System.out.println(clonedArrayList);    // [SB1, SB2+1, SB2+1]
         // System.out.println(clonedArrayList.clear()); // Error, cannot println a method returning "void"

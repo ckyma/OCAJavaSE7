@@ -17,6 +17,9 @@ public class DataTypes {
         * 2.1.2 Numeric
          */
         long fishInSea = 764398609800L;
+         // byte Byte = fishInSea; // Error: incompatible types
+        // byte Byte = 1000;    // Error: incompatible types, 1000 is too long for byte type, is considered as int now.
+        byte Byte = 100;
 
         int baseDecimal = 267;
         int octVal = 0413;
@@ -43,6 +46,8 @@ public class DataTypes {
         float orbit = 1765.6f;
         // float orbit1 = 1765.6;   // Error: incompatible types, default is double
         double inclination = 120.1;
+        double inclination1 = 120;
+        // int inclination2 = 120.1;   // Error: incompatible types, default is double, can assign type promotion only, stricter than C++
 
         /*
         * 2.1.3 Character
