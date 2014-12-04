@@ -17,6 +17,8 @@ public class TestFlowControl {
             System.out.println("else");
         }
 
+        // if(1){}  // Compilation error, Incompatible types, must be boolean type
+
         // When there is no braces, working from the innermost, match 'else' with the nearest 'if'
         int score = 110;
         if (score > 200)

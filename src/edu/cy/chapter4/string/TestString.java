@@ -30,9 +30,10 @@ public class TestString {
         String str9 = null;
         System.out.println(str9);   // null
         // System.out.println(null);   // Ambiguous method call for println(char[]) and println(String)
-        System.out.println(str9.substring(0));   // Runtime error, java.lang.NullPointerException
+        // System.out.println(str9.substring(0));   // Runtime error, java.lang.NullPointerException
 
-        System.out.println(str1.substring(1, str1.length()));
+        System.out.println(str1.substring(1, str1.length()));   // Ok
+        // System.out.println(str1.substring(1, str1.length()+1)); // Runtime exception: java.lang.StringIndexOutOfBoundsException: String index out of range: 6
         // System.out.println(str9 = str1.subSequence(1, 1)); // Error: Incompatible types, subSequence returns a CharSequence object
         System.out.println(str9 = (String) str1.subSequence(1, 2));
     }
