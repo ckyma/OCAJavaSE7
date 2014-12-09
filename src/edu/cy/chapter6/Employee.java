@@ -13,4 +13,8 @@ public class Employee {
     Employee(String name){
         this.name = name;
     };
+
+    protected void printSuperName(){
+        System.out.println("Super: " + name);
+    }
 }

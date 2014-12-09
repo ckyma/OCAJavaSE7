@@ -8,7 +8,11 @@ public class ThrowNumberFormatException {
         int num = 0;
         try{
             num = Integer.parseInt(val, 16);
-        }catch(NumberFormatException e){
+        }
+        catch(ExceptionInInitializerError e){
+
+        }
+        catch(NumberFormatException e){
             throw new NumberFormatException(val + " cannot be converted to hexadecimal number.");   // Customize error message
         }
         return num;
