@@ -1,7 +1,7 @@
 package edu.cy.chapter6;
 
 /**
- * Created by phinary0 on 12/9/14.
+ * Created by cy on 12/9/14.
  */
 public class Employee {
     String name;

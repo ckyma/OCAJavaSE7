@@ -1,7 +1,7 @@
 package edu.cy.chapter6;
 
 /**
- * Created by phinary0 on 12/9/14.
+ * Created by cy on 12/9/14.
  */
 
 interface Operations{
@@ -33,5 +33,10 @@ public class Programmer extends Employee implements Operations {
 
     public void printSuperName() {      // for the overrided method, it follow the access modifier of the subclass, which can only be less restrictive
         System.out.println("Sub: " + name);
+    }
+
+    public static void main(String[] args) {
+        Programmer programmer = new Programmer();
+        programmer.printSuperName();
     }
 }
