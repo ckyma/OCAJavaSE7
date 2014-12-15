@@ -13,6 +13,7 @@ class Sup{
 }
 
 class Sub extends Sup{
+    @Override
     public void print() throws FileNotFoundException,ArrayIndexOutOfBoundsException {  // Derived class overriding method can ONLY throw same or derived Checked Exception as the base class method.
         System.out.println("Sub");                                                      // But no requirement for throwing error or runtime exception
     }

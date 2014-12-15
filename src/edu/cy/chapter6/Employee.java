@@ -4,9 +4,10 @@ package edu.cy.chapter6;
  * Created by cy on 12/9/14.
  */
 public class Employee {
-    String name;
+    protected String name;
+    protected int age;
 
-    Employee(){
+    public Employee(){
         name = "Employee";
     };
 

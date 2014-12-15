@@ -87,6 +87,7 @@ public class DataTypes {
         System.out.println(10 / 6.0); // 1.6666666666666667
         double d = 10 / 6;
         System.out.println(d);  // 1.0
+        System.out.println(0f); // 0.0, caution: printed with ".0" for double and float
         System.out.println(10.0 % 6.0); // 4.0
         System.out.println(0 % 6); // 0
         System.out.println(1 % 6); // 1
