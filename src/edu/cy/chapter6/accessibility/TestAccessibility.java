@@ -3,7 +3,7 @@ package edu.cy.chapter6.accessibility;
 import edu.cy.chapter6.*;
 
 /**
- * Created by phinary0 on 12/15/14.
+ * Created by cy on 12/15/14.
  */
 public class TestAccessibility {        // can define same class name as the imported package
     public static void main(String[] args) {
