@@ -36,5 +36,7 @@ public class TestString {
         // System.out.println(str1.substring(1, str1.length()+1)); // Runtime exception: java.lang.StringIndexOutOfBoundsException: String index out of range: 6
         // System.out.println(str9 = str1.subSequence(1, 1)); // Error: Incompatible types, subSequence returns a CharSequence object
         System.out.println(str9 = (String) str1.subSequence(1, 2));
+
+        System.out.println("Apple".substring(1,4));     // Ok
     }
 }

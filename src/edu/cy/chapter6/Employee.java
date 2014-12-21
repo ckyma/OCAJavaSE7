@@ -3,7 +3,7 @@ package edu.cy.chapter6;
 /**
  * Created by cy on 12/9/14.
  */
-public class Employee {
+public class Employee {             // Employee can not be superclass of Programmer, cyclic inheritance is not allowed
     protected String name;
     protected int age;
 
