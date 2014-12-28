@@ -12,7 +12,7 @@ interface Operations{
 
 public class Programmer extends Employee implements Operations {
     String name;
-    private char gender = 'M';
+    private char gender = 'M';          // Ok to redefine the variable type
 
     public Programmer(){
         super();
@@ -44,6 +44,7 @@ public class Programmer extends Employee implements Operations {
     public static void main(String[] args) {
         Programmer programmer = new Programmer();
         programmer.printSuperName();
+        System.out.println(programmer.n);
     }
 }
 

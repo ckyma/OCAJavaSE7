@@ -6,6 +6,9 @@ package edu.cy.chapter6;
 public class Employee {             // Employee can not be superclass of Programmer, cyclic inheritance is not allowed
     protected String name;
     protected int age;
+    private String gender;
+
+    static int n;
 
     public Employee(){
         name = "Employee";
