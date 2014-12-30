@@ -6,7 +6,8 @@ package edu.cy.chapter6;
 
 class Super { static String ID = "QBANK"; }
 class Sub extends Super{
-    static { System.out.print("In Sub"); }
+    static final int a;                             // Ok to separate the "static final" declaration and initialization
+    static { System.out.print("In Sub"); a = 0;}
 }
 
 public class TestClassInitialization {
