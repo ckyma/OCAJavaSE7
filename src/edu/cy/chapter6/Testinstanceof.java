@@ -21,6 +21,10 @@ public class Testinstanceof {
         A ad = new D();
         System.out.println(a instanceof B);     // true
         // B ba = (B) new A();                  // Runtime exception, java.lang.ClassCastException, explicit casting super to sub class
+
+        E e = new E();
+        // System.out.println(e instanceof A);     // Compilation error, incompatible types, no logic at all for class
+        System.out.println(e instanceof I);         // Ok, false, still possible for interface
     }
 }
 
@@ -28,3 +32,5 @@ class A {}
 class B extends A {}
 class C extends A {}
 class D extends B {}
+class E {}
+interface I {}
